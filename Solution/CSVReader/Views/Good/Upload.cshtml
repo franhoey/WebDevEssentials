@@ -1,0 +1,9 @@
+﻿@model List<CSVReader.Models.Dragon>
+
+@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Valid data</h2>
+@Html.Partial("DragonList", Model)

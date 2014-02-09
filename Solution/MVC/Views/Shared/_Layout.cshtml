@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        table { width: 100%; height: 100%;}
+        td { border: 1px solid black;}
+        .header { background-color: #EEE; }
+        .footer { background-color: #AAA; }
+        .leftnav { background-color: #3EC9F3; width: 200px; }
+        .rightnav { background-color: #3EF398; width: 200px; }
+        .pagesection { background-color: #EAF33E; }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+           <table>
+               <tr>
+                   <td class="header" colspan="3">HEADER - From the master page</td>
+               </tr>
+               <tr>
+                   <td class="leftnav">Left Nav<br/>From the master pagse</td>
+                   <td>
+                       @RenderBody()
+                   </td>
+                   <td class="rightnav">
+                       <div>Right section<br/>from the masterpage</div>
+                       <div class="pagesection">
+                           @RenderSection("RightSection")
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td class="footer" colspan="3">Footer - From the master page</td>
+               </tr>
+           </table>
+        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model List<CSVReader.Models.Dragon>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Twitter</th>
+        <th>Type</th>
+    </tr>
+
+    @foreach (var dragon in Model)
+    {
+        <tr>
+            <td>@dragon.Name</td>
+            <td>@dragon.Age</td>
+            <td>@dragon.Twitter</td>
+            <td>@dragon.Type</td>
+        </tr>
+    }
+
+</table>

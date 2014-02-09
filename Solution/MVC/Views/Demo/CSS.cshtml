@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS</title>
+    <script type="text/javascript" src="@Url.Content("~/scripts/jquery-1.10.2.min.js")"></script>
+    <script type="text/javascript">
+        $(function () {
+            //$(".hidden").fadeIn(2000);
+            //$(".hidden").fadeIn(2000, function () { $(".hidden").fadeOut(2000); });
+        })
+    </script>
+    <style type="text/css">
+         .box {
+             width: 200px;
+             height: 75px;
+             border: 1px solid black;
+         }
+         .hidden {
+             display: none;
+             background-color: #FC6262;
+         }
+         .inline {
+             display: inline;
+             background-color: #679DCA;
+         }
+         .block {
+             display: block;
+             background-color: #67CA69;
+         }
+         .static {
+             position: static;
+             background-color: #679DCA;
+         }
+         .relative {
+             position: relative;
+             top: 10px;
+             right: 10px;
+             background-color: #67CA69;
+         }
+         .absolute {
+             position: absolute;
+             top: 10px;
+             right: 10px;
+             background-color: #FC6262;
+         }
+         .float-container {
+             width: 450px;
+             background-color: #67CA69;
+         }
+         .float-left {
+             float: left;
+             background-color: #FC6262;
+         }
+         .float-right {
+             float: right;
+             background-color: #679DCA;
+         }
+         .clearer {
+             clear: both;
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Display</h2>
+        <div class="box hidden">hidden</div>
+        <div class="box inline">inline left</div>
+        <div class="box inline">inline right</div>
+        <div class="box block">block</div>
+    </div>
+    <div>
+        <h2>Position</h2>
+        <div class="box static">static</div>
+        <div class="box relative">relative</div>
+        <div class="box absolute">absolute</div>
+    </div>
+    <div>
+        <h2>Float</h2>
+        <div class="float-container"> &nbsp;
+            <div class="box float-left">float left</div>
+            <div class="box float-right">float right</div>
+            <div class="clearer"></div>
+        </div>
+    </div>
+</body>
+</html>

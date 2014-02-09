@@ -1,0 +1,37 @@
+﻿@model MVC.Models.InterestingDataViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ModelBinding</title>
+</head>
+    <body>
+        
+        <h3>@Model.Message</h3>
+        
+        @if (Model.HasData)
+        {
+            <p>Hello @Model.Name, your favourite colour is @Model.Colour</p>
+        }
+
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Colour)
+                @Html.TextBoxFor(m => m.Colour)
+            </div>
+            <div>
+                <input type="submit" value="Clicky"/>
+            </div>
+        }
+    </body>
+</html>

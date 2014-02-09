@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload CSV</h2>
+
+@using (Html.BeginForm("Upload", "Good", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    @Html.Partial("FormUpload")
+}
